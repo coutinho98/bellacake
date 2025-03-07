@@ -1,8 +1,11 @@
-import Main from "./pages/Main"
+import { BrowserRouter } from "react-router";
+import Routers from "./Routers";
 
 function App() {
   return (
-    <Main />
+    <BrowserRouter>
+      <Routers />
+    </BrowserRouter>
   )
 }
 

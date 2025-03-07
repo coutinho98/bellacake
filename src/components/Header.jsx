@@ -1,13 +1,17 @@
 const Header = () => {
     return (
-        <div className="bg-white rounded-2xl shadow-xl p-6 mb-8 border-t-4 border-pink-500 relative overflow-hidden">
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-pink-100 rounded-full opacity-50">
-                <div className="absolute top-10 right-10 w-16 h-16 bg-purple-100 rounded-full opacity-60">
-                    <h1 className="text-3xl font-bold text-center text-pink-600 mb-2 relative z-10">Belle Cake</h1>
-                </div>
-            </div>
+        <div className="w-full h-full absolute bg-(--color-background)">
+            <header className="flex justify-between items-center text-white py-6 px-8 md:px-32">
+                <a href="" className="text-4xl hover:scale-105 transition-all">Belle Cake
+                </a>
+                <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
+                    <li className="p-3 hover:underline underline-offset-4 rounded-md transition-all cursor-pointer">Home</li>
+                    <li className="p-3 hover:underline underline-offset-4 rounded-md transition-all cursor-pointer">Produtos</li>
+                </ul>
+                <div className="relative hidden md:flex items-center justify-center gap-3"></div>
+            </header>
         </div>
-    )
-}
+    );
+};
 
 export default Header;
