@@ -3,4 +3,26 @@
 @theme {
    --color-background: #A56E70;
    --color-background-100: #7e4b4d;
-  }
+}
+
+@layer components {
+   .underline-animation {
+       @apply p-3 cursor-pointer relative overflow-hidden;
+   }
+
+   .underline-animation::after {
+       content: '';
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 0;
+       height: 0.5px;
+       background-color: white;
+       transition: width 0.3s ease-in-out;
+       transform-origin: left;
+   }
+
+   .underline-animation:hover::after {
+       width: 100%;
+   }
+}
